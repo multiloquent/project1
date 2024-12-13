@@ -35,9 +35,9 @@ def voter_fraud_detection(i_d: str) -> bool:
         return fraud
 
 
-def submit_logic(i_d: str, vote: str, warning: callable[[], None], un_warning: callable[[], None],
-                 incorrect_input: callable[[], None], no_selection: callable[[], None],
-                 count_update: callable[[], None]) -> None:
+def submit_logic(i_d: str, vote: str, warning: callable, un_warning: callable,
+                 incorrect_input: callable, no_selection: callable,
+                 count_update: callable) -> None:
     """
     Main logic of program. Based on truth values from functions adds voter IDs and votes to
     voter_id_record.csv. Uses methods, as parameters, from gui.py to alert user to user error.
